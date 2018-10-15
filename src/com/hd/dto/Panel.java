@@ -7,16 +7,16 @@ import java.util.Set;
 /**
  * @author chuanhao.zhao@hand-china.com
  * @version 1.0
- * @name
- * @description
+ * @name Panel
+ * @description 棋盘类，即整个游戏
  * @date 2018/10/9
  */
 public class Panel {
-    public static final int WIDTH = 8;
-    public static final int HEIGHT = 8;
-    public static final int KIND = 4;
+    public static final int WIDTH = 8;  // 棋盘的宽
+    public static final int HEIGHT = 8;  // 棋盘的高
+    public static final int KIND = 4;  // 棋盘中元素的种类
 
-    private Object[][] objects;
+    private Object[][] objects;  // 所有棋盘的元素装在二维数组中
 
     public Object[][] getObjects() {
         return objects;
@@ -27,7 +27,7 @@ public class Panel {
     }
 
     public Panel(){
-        //初始化棋盘时，在外层加一圈通道
+        //初始化棋盘时，在外层加一圈通道(所以上下各加2)
         this.objects = new Object[Panel.WIDTH + 2][Panel.HEIGHT + 2];
         int count = (WIDTH * HEIGHT) / KIND;
         if(count % 2 != 0){

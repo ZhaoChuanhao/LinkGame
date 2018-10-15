@@ -17,6 +17,13 @@ import java.util.List;
  */
 public class LinkUtil {
 
+    /**
+     * 判断两点能否相连
+     * @param objects  棋盘
+     * @param point1  点1
+     * @param point2  点2
+     * @return
+     */
     public static boolean link(Object[][] objects, MyPoint point1, MyPoint point2){
 
         if(point1.x <= 0 || point1.x > Panel.WIDTH || point1.y <= 0 || point1.y > Panel.HEIGHT
@@ -40,6 +47,13 @@ public class LinkUtil {
         }
     }
 
+    /**
+     * 广度优先遍历最短路径
+     * @param objects
+     * @param point1
+     * @param point2
+     * @return
+     */
     public static boolean shortestPath(Object[][] objects, MyPoint point1, MyPoint point2){
         List<MyPoint> list = new LinkedList<>();  //用来模拟队列
         List<MyPoint> list_copy = new LinkedList<>();  //用来存储所有操作过程中的点
@@ -98,6 +112,10 @@ public class LinkUtil {
         return false;
     }
 
+    /**
+     * 打印路径
+     * @param list
+     */
     public static void printPath(List<MyPoint> list){
         //最后一个点就是连接成功的点
         MyPoint point = list.get(list.size() - 1);

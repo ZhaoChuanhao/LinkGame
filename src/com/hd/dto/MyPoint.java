@@ -4,8 +4,11 @@ import java.awt.*;
 import java.util.Objects;
 
 /**
- * @author 赵传昊
- * @date 2018/10/14 15:25
+ * @author chuanhao.zhao@hand-china.com
+ * @version 1.0
+ * @name Panel
+ * @description 点类，即每个元素
+ * @date 2018/10/9
  */
 public class MyPoint extends Point {
     public int step;  //起点到该点的步数

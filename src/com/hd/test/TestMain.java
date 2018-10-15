@@ -22,6 +22,7 @@ public class TestMain {
         Panel panel = new Panel();
         Object[][] objects = panel.getObjects();
         int count = Panel.WIDTH * Panel.HEIGHT;
+        // 用count控制棋盘中剩余点的个数
         while (count > 0){
             for (int i = 1; i <= Panel.WIDTH; i++){
                 System.out.print("|");
